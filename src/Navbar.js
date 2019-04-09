@@ -1,9 +1,8 @@
 import React from 'react';
 
-class Navbar extends Component {
-    function () {
+function Navbar () {
         return (
-            <div className ="navbar fixed-top">
+            <nav className ="navbar fixed-top navbar-expand-lg justify-content-center">
                 <div className="justify-content-center">
                     <ul className="navbar-nav">
                         <li className="nav-item">
@@ -13,7 +12,7 @@ class Navbar extends Component {
                             <a className="nav-link" href="#">PORTFOLIO</a>
                         </li>
                         <li className="nav-item">
-                            <img src={logo} className ="App-logo" alt="logo"><a className = "navbar-brand nav-link" href="#">IP</a></img>
+                            <a className = "navbar-brand nav-link" href="#">IP</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="#">MY BLOG</a>
@@ -23,9 +22,8 @@ class Navbar extends Component {
                         </li>
                     </ul>
                 </div>
-            </div>
+            </nav>
         )
     }
-}
 
 export default Navbar;
