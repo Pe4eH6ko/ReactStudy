@@ -1,7 +1,4 @@
-$font-stack: Bazar;
-$primary-color: rgb(122,189,189);
-$font-color: rgb(249,235,217);
-$fontLogo: "SeasideResortNF"; 
+@import "./all.scss"; 
 
 * {
    padding: 0px;
@@ -10,10 +7,9 @@ $fontLogo: "SeasideResortNF";
 
 .myMenu {
     background: $primary-color;
-    position: relative;
-    top: -9px;
+    position: fixed;
     width: 100%;
-    height: 135px;
+    height: 100px;
     justify-content: center;
 
     .element{
@@ -23,13 +19,16 @@ $fontLogo: "SeasideResortNF";
     }
 
      ul li{
-        padding: 98px 30px 27px 30px;
+        padding-top: 80px;
+        margin-right: 20px;
+        
 
         .logo{
             font-family: $fontLogo;
             font-size: 75px;
             position: relative;
-            top:-38px;    
+            top:-40px;
+            margin-left:20px;    
         }
     }
     
