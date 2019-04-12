@@ -1,3 +1,11 @@
+@font-face {
+    font-family: "Bazar";
+    src: url("./fonts/bazar/bazar.woff") format("woff");
+}
+@font-face{
+    font-family: "SeasideResortNF";
+    src: url("./fonts/SeasideResortNF/SEASRN__-webfont.woff") format("woff");
+}
 $font-stack: "Bazar";
 $primary-color: rgb(122,189,189);
 $font-color: rgb(249,235,217);
