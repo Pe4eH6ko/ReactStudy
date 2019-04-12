@@ -7,13 +7,12 @@ class MainPart extends React.Component{
         return (
             <div className="justify-content-center mainPart">
                 <div className = "justify-content-center mainHead">
-                    <h1 id="">Retro</h1>
-                    <p>Portfolio</p>    
+                    <h1 id="headerPart">Retro</h1>
+                    <p className="mainP">MY PERSONAL PORTFOLIO</p>    
                 </div>
                 <Carousel />
-                <div className = "justify-content-center mainGreeeting">
-                    <h3>HELLO, I AM IVAN POTURNAK</h3>
-                    <h4>WELCOME TO MY PORTFOLIO</h4>
+                <div className = "justify-content-center mainGreeting">
+                    <h3>"HELLO, I AM IVAN POTURNAK <br></br> WELCOME TO MY PORTFOLIO."</h3>
                 </div>
             </div>    
         )

@@ -1,17 +1,46 @@
-$font-stack: Bazar;
-$primary-color: rgb(122,189,189);
-$font-color: rgb(249,235,217);
-$fontLogo: "SeasideResortNF"; 
+@import "./all.scss"; 
 
 * {
     padding:0px;
     margin: 0px;
 }
 .mainPart{
-    background: $primary-color;
+    background: url("./back.png") repeat;
     width:100%;
-    min-height: 100%;
-    height: auto;
     position: relative;
     top: -10px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding-top: 5vh;
+    top:0;
+    //vertical-align: 
+    .mainHead{
+        h1 {
+            color: $font-color;
+            font: {
+                family: $fontLogo;
+                size: 90px;
+            }
+        }
+        .mainP{
+            padding-top: 30px;
+            color: $colorP;
+            font-family: $font-stack;
+            font-size: 20px;
+        }
+    }
+    .mainGreeting{
+        padding-top: 20px;
+        h3{
+            padding-top: 30px;
+            color: $font-color;
+            font: {
+                family: $font-stack;
+                size: 30px;
+            }
+        }
+    }
 }
