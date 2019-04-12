@@ -4,6 +4,58 @@
     padding: 0px;
     margin: 0px;
 }
-.carouselBlock {
-    
+.carousel{
+     border: solid 10px $font-color;
+     border-bottom: solid 30px $font-color;
+     .carousel-inner{
+        width: 640px;
+        height: 358px;
+    }
+    .carousel-control-next{
+        justify-content: flex-end;
+        .carousel-control-next-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%3b3b3b' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+            z-index: 1;
+        }
+        .half-right{
+            width: 40px;
+            height: 40px;
+            background-color: $font-color;
+            position: absolute;
+            border-radius: 100% 0 0 100%;
+            right:-10px;
+        }
+    }    
+    .carousel-control-prev {
+        justify-content: start;
+        .carousel-control-prev-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%3b3b3b' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+            z-index: 1;
+        }
+        .half-left{
+            width: 40px;
+            height: 40px;
+            background-color: $font-color;
+            position: absolute;
+            border-radius: 0 100% 100% 0;
+            left:-10px;
+        }    
+    }
+    .image-title{
+        position: absolute;
+        left:0;
+        right:0;
+        bottom:-43px;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: $font-stack;
+        color: $colorP;
+    }
 }
+.carousel-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
