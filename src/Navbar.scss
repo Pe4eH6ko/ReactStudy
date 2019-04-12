@@ -1,0 +1,38 @@
+$font-stack: Bazar;
+$primary-color: rgb(122,189,189);
+$font-color: rgb(249,235,217);
+$fontLogo: "SeasideResortNF"; 
+
+* {
+   padding: 0px;
+   margin: 0px; 
+}
+
+.myMenu {
+    background: $primary-color;
+    position: relative;
+    top: -9px;
+    width: 100%;
+    height: 135px;
+    justify-content: center;
+
+    .element{
+        font-family: $font-stack;
+        color: $font-color;
+        font-size: 27px;
+    }
+
+     ul li{
+        padding: 98px 30px 27px 30px;
+
+        .logo{
+            font-family: $fontLogo;
+            font-size: 75px;
+            position: relative;
+            top:-38px;    
+        }
+    }
+    
+} 
+
+  
