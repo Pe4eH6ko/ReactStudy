@@ -11,42 +11,59 @@ class Portfolio extends React.Component{
                 </div>
                 <div className="row myWorks">
                     <div className="col-md-4 card workPage">
-                        <a><img src="" className="card-img-top" alt="..."></img></a>
-                        <div className="card-body">
-                            <p className="card-text">My portfolio</p>
-                        </div>
+                        <a href="./App.js" className="worksHref">
+                            <img src={require('./img/web-1.png')} className="card-img-top worksImage" alt="First work"></img>
+                            <div className="card-body worksName">
+                                <p className="card-text">MY PORTFOLIO</p>
+                            </div>
+                        </a>
+                    </div>        
+                    <div className="col-md-4 card workPage">
+                        <a href="" className="worksHref">
+                            <img src={require('./img/Pacman-1.gif')} className="card-img-top worksImage packman" alt="Coming soon"></img>
+                            <div className="card-body worksName">
+                                <p className="card-text">COMING SOON</p>
+                            </div>
+                        </a>
                     </div>
                     <div className="col-md-4 card workPage">
-                        <a><img src="" className="card-img-top" alt="..."></img></a>
-                        <div className="card-body">
-                            <p className="card-text">My portfolio</p>
-                        </div>
+                        <a href="" className="worksHref">
+                            <div className="loader"></div>
+                            {/*<img src="" className="card-img-top worksImage" alt="..."></img>*/}
+                            <div className="card-body worksName">
+                                <p className="card-text">COMING SOON</p>
+                            </div>
+                        </a>
                     </div>
                     <div className="col-md-4 card workPage">
-                        <a><img src="" className="card-img-top" alt="..."></img></a>
-                        <div className="card-body">
-                            <p className="card-text">My portfolio</p>
-                        </div>
+                        <a href="" className="worksHref">
+                            <div className="loader"></div>
+                            {/*<img src="" className="card-img-top worksImage" alt="..."></img>*/}
+                            <div className="card-body worksName">
+                                <p className="card-text">COMING SOON</p>
+                            </div>
+                        </a>
                     </div>
                     <div className="col-md-4 card workPage">
-                        <a><img src="" className="card-img-top" alt="..."></img></a>
-                        <div className="card-body">
-                            <p className="card-text">My portfolio</p>
-                        </div>
+                        <a href="" className="worksHref">
+                            <div className="loader"></div>
+                            {/*<img src="" className="card-img-top worksImage" alt="..."></img>*/}
+                            <div className="card-body worksName">
+                                <p className="card-text">COMING SOON</p>
+                            </div>
+                        </a>
                     </div>
                     <div className="col-md-4 card workPage">
-                        <a><img src="" className="card-img-top" alt="..."></img></a>
-                        <div className="card-body">
-                            <p className="card-text">My portfolio</p>
-                        </div>
-                    </div>
-                    <div className="col-md-4 card workPage">
-                        <a><img src="" className="card-img-top" alt="..."></img></a>
-                        <div className="card-body">
-                            <p className="card-text">My portfolio</p>
-                        </div>
+                        <a href="" className="worksHref">
+                            <div className="loader"></div>
+                            {/*<img src="" className="card-img-top worksImage" alt="..."></img>*/}
+                            <div className="card-body worksName">
+                                <p className="card-text">COMING SOON</p>
+                            </div>
+                        </a>
                     </div> 
-                </div>                                                                             
+                </div>
+                <p>See all...</p>                                                                             
             </div>
         )
     }
