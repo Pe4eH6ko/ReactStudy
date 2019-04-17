@@ -6,6 +6,7 @@ import MainPart from './MainPart';
 import Aboutme from './Aboutme';
 import Portfolio from './Portfolio';
 import Blog from './Blog';
+import Contactme from './Contactme';
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
         <Aboutme />
         <Portfolio />
         <Blog />
+        <Contactme />
       </div>
     );
   }
