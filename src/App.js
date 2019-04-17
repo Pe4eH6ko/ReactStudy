@@ -5,6 +5,7 @@ import Navbar from './Navbar';
 import MainPart from './MainPart';
 import Aboutme from './Aboutme';
 import Portfolio from './Portfolio';
+import Blog from './Blog';
 
 class App extends Component {
   render() {
@@ -14,6 +15,7 @@ class App extends Component {
         <MainPart />
         <Aboutme />
         <Portfolio />
+        <Blog />
       </div>
     );
   }
