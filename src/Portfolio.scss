@@ -49,6 +49,7 @@
                     .packman{
                         width: 150px !important;
                         height: 150px !important;
+                        margin-top:5px;
                     }
                     .worksName{
                         position: relative;
@@ -63,7 +64,12 @@
                 }
             }      
     } 
-    p{
-        padding-top: 20px;
-    } 
+    a{
+        text-decoration: none;
+        color: $colorP;
+        p{
+            padding-top: 20px;
+            font-family: $font-stack;
+        } 
+    }    
 }
