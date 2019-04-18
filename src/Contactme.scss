@@ -1,0 +1,66 @@
+@import 'all.scss';
+
+*{
+    padding:0;
+    margin:0;
+}
+
+.contactmePart{
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    background:url("./back-contact.png") repeat;
+    justify-content: center;
+    .contact-head{
+        h1{
+            color: $font-color;
+            font-family: $font-stack;
+            font-size: 90px;
+            text-shadow: 3px 3px 0 rgb(59, 59, 59), 4px 4px 0 $font-color;
+        }
+        p{
+            color: $font-color;
+            font-family: $font-stack;
+        }
+    }
+    .formPart{
+        width: 500px;
+        margin: 0 auto;
+        margin-top: 60px;
+        
+        .form-parts{
+            margin-top: -30px;
+        }
+        button{
+            min-width: 140px;
+            height: 40px;
+            font-size: 15px;
+            background: $font-color;
+            border:none;
+            color: $colorP;
+            font-weight: bold;
+            justify-self: flex-start;
+        }
+    }
+    .socialPart{
+        margin-top: 50px;
+        p{
+            color: $font-color;
+            font-family: $font-stack; 
+            font-size: 30px;   
+        }
+        .socialIcons{
+            a{
+                text-decoration: none;
+                color: $colorP;
+                background: $font-color;
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                margin: 10px;
+                font-size: 50px;
+                padding: 15px 15px;
+                box-shadow: 0 0 0 2px rgba(59, 59, 59, 1), 0 0 0 4px rgba(249,235,217, 1);
+            }
+        }
+    }    
+}
