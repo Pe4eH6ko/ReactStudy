@@ -7,11 +7,12 @@ class Portfolio extends React.Component{
 
     //     this.changeText = this.changeText.bind(this);
     // }
-    // changeText() {
-    //     var element = React.findDOMNode(this.refs.seeAll);
-    //     console.log(element);
-    //     //.childNodes.innerText("Nothing yet =)")
-    // }
+    changeText() {
+        var link = document.getElementById("seeAll");
+        var text = link.firstChild.innerText("");
+        console.log(text);
+        //.childNodes.innerText("Nothing yet =)")
+    }
     render(){
         return(
             <div className="portfolioPart">
@@ -69,7 +70,7 @@ class Portfolio extends React.Component{
                         </a>
                     </div> 
                 </div>
-                <a href="" id="seeAll" ref="seeAll" /*onClick={this.changeText()}*/><p>SEE ALL...</p></a>                                                                             
+                <a href="#" id="seeAll" ref="seeAll" onClick={this.changeText}><p>SEE ALL...</p></a>                                                                             
             </div>
         )
     }

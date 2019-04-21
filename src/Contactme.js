@@ -11,19 +11,19 @@ class Contactme extends React.Component{
                 </div> 
                 <form className="formPart">
                     <div className="form-group form-parts">
-                        <label for="formGroupExampleInput"></label>
+                        <label htmlFor="formGroupExampleInput"></label>
                         <input type="text" className="form-control" id="exampleInputName" placeholder="Name"></input>
                     </div>
                     <div className="form-group form-parts">
-                        <label for="exampleInputEmail1"></label>
+                        <label htmlFor="exampleInputEmail1"></label>
                         <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email addres"></input>
                     </div>
                     <div className="form-group form-parts">
-                        <label for="formGroupExampleInput"></label>
+                        <label htmlFor="formGroupExampleInput"></label>
                         <input type="text" className="form-control" id="exampleInputName" placeholder="Subject"></input>
                     </div>
                     <div className="form-group form-parts">
-                        <label for="exampleFormControlTextarea1"></label>
+                        <label htmlFor="exampleFormControlTextarea1"></label>
                         <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Your Message"></textarea>
                     </div>
                     <button type="submit" className="btn btn-primary">Send Massage</button>
