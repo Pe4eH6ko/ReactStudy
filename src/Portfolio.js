@@ -2,16 +2,10 @@ import React from 'react';
 import './Portfolio.scss';
 
 class Portfolio extends React.Component{
-    // constructor(props){
-    //     super(props);
-
-    //     this.changeText = this.changeText.bind(this);
-    // }
     changeText() {
         var link = document.getElementById("seeAll");
-        var text = link.firstChild.innerText("");
+        var text = link.firstChild.innerText = "NOTHING ELSE";
         console.log(text);
-        //.childNodes.innerText("Nothing yet =)")
     }
     render(){
         return(
@@ -70,7 +64,7 @@ class Portfolio extends React.Component{
                         </a>
                     </div> 
                 </div>
-                <a href="#" id="seeAll" ref="seeAll" onClick={this.changeText}><p>SEE ALL...</p></a>                                                                             
+                <a href="javascript:void(0)" id="seeAll" ref="seeAll" onClick={this.changeText}><p>SEE ALL...</p></a>                                                                             
             </div>
         )
     }

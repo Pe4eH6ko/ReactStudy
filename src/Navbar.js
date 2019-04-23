@@ -5,15 +5,12 @@ render() {
         return (
             <nav className ="navbar fixed-top navbar-expand-lg justify-content-center myMenu">
                 <div className="justify-content-center">
-                    <ul className="justify-content-center navbar-nav">
+                    <ul className="justify-content-center navbar-nav menuBlock">
                         <li className="justify-content-center nav-item">
                             <a className="nav-link element" href="#">ABOUT ME</a>
                         </li>
                         <li className="justify-content-center nav-item">
                             <a className="nav-link element" href="#">PORTFOLIO</a>
-                        </li>
-                        <li className="justify-content-center nav-item logoImage">
-                            <a className = "navbar-brand nav-link element logo" href="#">IP</a>
                         </li>
                         <li className="justify-content-center nav-item">
                             <a className="nav-link element" href="#">MY BLOG</a>
