@@ -3,21 +3,32 @@ import './Navbar.scss';
 import NavBarElement from './NavBarElement';
 
 class Navbar extends React.Component{
-    state: {
-        elements: [
-            {text: 'ABOUT ME', href:'#aboutMe'},
-            {text: 'PORTFOLIO', href:'#portfolio'},
-            {text: 'BLOG', href:'blog'},
-            {text: 'CONTACT ME', href:'contactme'}          
-        ],
-        linkClass: 'nav-link element',
-        liClass: 'justify-content-center nav-item'
+    constructor(props){
+        super(props);
+        this.state = {
+            elements: [
+                {text: 'ABOUT ME', href:'#aboutMe'},
+                {text: 'PORTFOLIO', href:'#portfolio'},
+                {text: 'BLOG', href:'#blog'},
+                {text: 'CONTACT ME', href:'#contactme'}          
+            ],
+            linkClass: 'nav-link element',
+            liClass: 'justify-content-center nav-item'
+        };
+        this.makeMenu = this.makeMenu.bind(this);
     }
 
     makeMenu() {
         var menu = document.getElementById("menu");
         var elCounts = this.state.elements.length;
-        console.log(elCounts);
+        for(var i = 0; i < elCounts; i++){
+            var liElement = React.createElement(
+                '<NavBarElement />', 
+                [linkClass=this.linkClass, liClass=this.liClass, href={href[i]}, text={text[i]}]
+            console.log(liElement);    
+        }
+        
+        
     }
 
 render() {
