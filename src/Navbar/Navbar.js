@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import './Navbar.scss';
 import NavBarElement from './NavBarElement';
 
@@ -7,41 +8,22 @@ class Navbar extends React.Component{
         super(props);
         this.state = {
             elements: [
-                {text: 'ABOUT ME', href:'#aboutMe'},
-                {text: 'PORTFOLIO', href:'#portfolio'},
-                {text: 'BLOG', href:'#blog'},
-                {text: 'CONTACT ME', href:'#contactme'}          
+                {text: 'ABOUT ME', href:'#aboutMe', key='1'},
+                {text: 'PORTFOLIO', href:'#portfolio', key='2'},
+                {text: 'BLOG', href:'#blog', key='3'},
+                {text: 'CONTACT ME', href:'#contactme', key='4'}          
             ],
             linkClass: 'nav-link element',
             liClass: 'justify-content-center nav-item'
         };
-        this.makeMenu = this.makeMenu.bind(this);
     }
-
-    makeMenu() {
-        var menu = document.getElementById("menu");
-        var elCounts = this.state.elements.length;
-        for(var i = 0; i < elCounts; i++){
-            var liElement = React.createElement(
-                '<NavBarElement />', 
-                [linkClass=this.linkClass, liClass=this.liClass, href={href[i]}, text={text[i]}]
-            console.log(liElement);    
-        }
-        
-        
-    }
-
 render() {
-
-        const elements = this.state.elements;
-        const link = this.state.linkClass;
-        const li = this.state.liClass;
-
         return (
             <nav className ="navbar fixed-top navbar-expand-lg justify-content-center myMenu">
-                <div className="justify-content-center">
-                    <ul className="justify-content-center navbar-nav menuBlock" id="menu">
-                        <li className="justify-content-center nav-item">
+                <div className="justify-content-center">               
+                     <ul className="justify-content-center navbar-nav menuBlock" id="menu">
+                    
+                        {/* <li className="justify-content-center nav-item">
                             <a className="nav-link element" href="#" onClick={this.makeMenu}>ABOUT ME</a>
                         </li>
                         <li className="justify-content-center nav-item">
@@ -52,8 +34,8 @@ render() {
                         </li>
                         <li className="justify-content-center nav-item ">
                             <a className="nav-link element" href="#">CONTACT ME</a>
-                        </li>
-                    </ul>
+                        </li>  */}
+                    </ul> 
                 </div>
             </nav>
         )
