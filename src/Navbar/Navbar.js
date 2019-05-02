@@ -13,7 +13,7 @@ class Navbar extends React.Component{
                 {text: 'BLOG', href:'#blog', key:'3', linkClass: 'nav-link element', liClass: 'justify-content-center nav-item'},
                 {text: 'CONTACT ME', href:'#contactme', key:'4', linkClass: 'nav-link element', liClass: 'justify-content-center nav-item'}          
             ]  
-        };
+        }
     }
     componentDidMount(){
         this.setState({elements: this.state.elements});
