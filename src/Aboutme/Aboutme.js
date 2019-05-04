@@ -9,7 +9,7 @@ class Aboutme extends React.Component{
         this.makeText = this.makeText.bind(this);
         this.state = {
             elements:[
-                {divClass:'col-md-3 about-column', imgClass:'about-image', src:require('./img/movies.png'), alt:'movies', text:'"./text/movies.txt"'},
+                {divClass:'col-md-3 about-column', imgClass:'about-image', src:require('./img/movies.png'), alt:'movies', text:'G:/ReactStudy/firstwork/src/Aboutme/text/movies.txt'},
                 {divClass:'col-md-3 about-column', imgClass:'about-image', src:require('./img/music.png'), alt:'music', text:'"./text/music.txt"'},
                 {divClass:'col-md-3 about-column', imgClass:'about-image', src:require('./img/clothes.png'), alt:'clothes', text:'"./text/movies.txt"'},
                 {divClass:'col-md-3 about-column', imgClass:'about-image', src:require('./img/food.png'), alt:'food', text:'"./text/movies.txt"'}
@@ -19,8 +19,10 @@ class Aboutme extends React.Component{
     componentDidMount(){
         this.setState({elements: this.state.elements});
     }
-    makeText(fileAdress){
-          
+    makeText(){
+        $.get('movies.json', function(data){
+            console.log(data)
+        })
     }
     render(){
         return(
@@ -36,7 +38,7 @@ class Aboutme extends React.Component{
                                 <img className={div.imgClass} src={div.src} alt={div.alt}></img>
                                 <h2>MOVIES</h2>
                                 <h5>WHAT I WATCH</h5>
-                                <p className='text'>{this.makeText(div.text)}</p> 
+                                <p className='text'>{this.makeText()}</p> 
                             </div>
                         )}
                         {/* <div className="col-md-3 about-column">
