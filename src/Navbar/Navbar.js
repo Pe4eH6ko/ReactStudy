@@ -8,7 +8,7 @@ class Navbar extends React.Component{
         super(props);
         this.state = {
             elements: [
-                {text: 'ABOUT ME', href:'#aboutMe', key:'1', linkClass: 'nav-link element', liClass: 'justify-content-center nav-item'},
+                {text: 'ABOUT ME', href:'#aboutme', key:'1', linkClass: 'nav-link element', liClass: 'justify-content-center nav-item'},
                 {text: 'PORTFOLIO', href:'#portfolio', key:'2', linkClass: 'nav-link element', liClass: 'justify-content-center nav-item'},
                 {text: 'BLOG', href:'#blog', key:'3', linkClass: 'nav-link element', liClass: 'justify-content-center nav-item'},
                 {text: 'CONTACT ME', href:'#contactme', key:'4', linkClass: 'nav-link element', liClass: 'justify-content-center nav-item'}          

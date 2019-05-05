@@ -16,11 +16,11 @@ class Portfolio extends React.Component{
     }
     changeText() {
         var link = document.getElementById("seeAll");
-        var text = link.firstChild.innerText = "NOTHING ELSE";
+        link.firstChild.innerText = "NOTHING ELSE";
     }
     render(){
         return(
-            <div className="portfolioPart">
+            <div className="portfolioPart" id="portfolio">
                 <div className = "about-head">
                     <h1 className="head">PORTFOLIO</h1>
                     <p>SIMPLICITY IS THE ULTIMATE SOPHISTICATION</p>

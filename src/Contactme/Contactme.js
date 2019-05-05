@@ -1,15 +1,22 @@
 import React from 'react';
 import "./Contactme.scss";
+import $ from 'jquery';
 
 class Contactme extends React.Component{
+
+    sendForm(){
+        $.post("sendFrom.php", $.get("#myForm").serialize(),function(data){
+            alert("Your Message Send!");
+        }, "json");
+    }
     render(){
         return(
-            <div className="contactmePart">
+            <div className="contactmePart" id="contactme">
                 <div className = "contact-head">
                     <h1>CONTACT ME</h1>
                     <p>I'LL BE GLAD ANSWER YOUR QUESTIONS!</p>
                 </div> 
-                <form className="formPart">
+                <form className="formPart" id="myForm">
                     <div className="form-group form-parts">
                         <label htmlFor="formGroupExampleInput"></label>
                         <input type="text" className="form-control" id="exampleInputName" placeholder="Name"></input>
@@ -31,11 +38,11 @@ class Contactme extends React.Component{
                 <div className="socialPart">
                     <p>I AM SOCIAL</p>
                     <div className="socialIcons">
-                        <a href="" className="fa fa-twitter ico"></a>
-                        <a href="" className="fa fa-facebook-square ico"></a>
-                        <a href="" className="fa fa-github ico"></a>
-                        <a href="" className="fa fa-instagram ico"></a>
-                        <a href="" className="fa fa-linkedin ico"></a>
+                        <a href="https://twitter.com/Pe4eH6ko" className="fa fa-twitter ico"></a>
+                        <a href="https://www.facebook.com/Pe4eH6ko" className="fa fa-facebook-square ico"></a>
+                        <a href="https://github.com/Pe4eH6ko" className="fa fa-github ico"></a>
+                        <a href="https://www.instagram.com/pe4eh6ko/?hl=uk" className="fa fa-instagram ico"></a>
+                        <a href="https://www.linkedin.com/in/ivan-poturnak-2027a7176/" className="fa fa-linkedin ico"></a>
                     </div>
                 </div>               
             </div>

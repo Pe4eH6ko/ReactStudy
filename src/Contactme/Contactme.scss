@@ -7,9 +7,9 @@
 
 .contactmePart{
     padding-top: 5vh;
-    padding-bottom: 5vh;
     background:url("./img/back-contact.png") repeat;
     justify-content: center;
+    min-height: 90vh;
     .contact-head{
         h1{
             color: $font-color;

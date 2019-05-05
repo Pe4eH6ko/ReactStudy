@@ -2,9 +2,15 @@ import React from 'react';
 import './Blog.scss';
 
 class Blog extends React.Component{
+
+    changeText() {
+        var link = document.getElementById("showAll");
+        link.firstChild.innerText = "NOTHING ELSE";
+    }
+
     render(){
         return(
-            <div className = "blogPart">
+            <div className = "blogPart" id="blog">
                 <div className = "blog-head">
                     <h1>MY BLOG</h1>
                     <p>NEWS FROM MY LIFE</p>
@@ -25,7 +31,7 @@ class Blog extends React.Component{
                         </div>
                     </div>    
                 </div>
-                <a href=""><p className="showAll">SHOW ALL POSTS</p></a>    
+                <a href="javascript:void(0)" onClick={this.changeText} id="showAll"><p className="showAll">SHOW ALL POSTS</p></a>    
             </div>
         )
     }
