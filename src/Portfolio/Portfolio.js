@@ -2,10 +2,21 @@ import React from 'react';
 import './Portfolio.scss';
 
 class Portfolio extends React.Component{
+    constructor(props){
+        super(props); 
+        this.state = {
+            elements:[
+                {divClass:'col-md-4 card workPage', aHref:'./App.js', linkClass: 'worksHref', src: require('./img/web-1.png'),imgClass:'card-img-top worksImage', alt:'First work', cardBodyclass:'card-body worksName', pClass:'card-text', text:'MY PORTFOLIO'},
+                {divClass:'col-md-4 card workPage', aHref:'javascript:void(0)', linkClass: 'worksHref', src: require('./img/Pacman-1.gif'),imgClass:'card-img-top worksImage packman', alt:'Coming soon', cardBodyclass:'card-body worksName', pClass:'card-text', text:'COMING SOON'}
+            ]
+        }  
+    }
+    componentDidMount(){
+        this.setState({elements: this.state.elements});
+    }
     changeText() {
         var link = document.getElementById("seeAll");
         var text = link.firstChild.innerText = "NOTHING ELSE";
-        console.log(text);
     }
     render(){
         return(
@@ -15,54 +26,16 @@ class Portfolio extends React.Component{
                     <p>SIMPLICITY IS THE ULTIMATE SOPHISTICATION</p>
                 </div>
                 <div className="row myWorks">
-                    <div className="col-md-4 card workPage">
-                        <a href="./App.js" className="worksHref">
-                            <img src={require('./img/web-1.png')} className="card-img-top worksImage" alt="First work"></img>
-                            <div className="card-body worksName">
-                                <p className="card-text">MY PORTFOLIO</p>
+                    {this.state.elements.map((div,i)=>
+                        <div className={div.divClass}>
+                        <a href={div.aHref} className={div.linkClass}>
+                            <img src={div.src} className={div.imgClass} alt={div.alt}></img>
+                            <div className={div.cardBodyclass}>
+                                <p className={div.pClass}>{div.text}</p>
                             </div>
                         </a>
-                    </div>        
-                    <div className="col-md-4 card workPage">
-                        <a href="" className="worksHref">
-                            <img src={require('./img/Pacman-1.gif')} className="card-img-top worksImage packman" alt="Coming soon"></img>
-                            <div className="card-body worksName">
-                                <p className="card-text">COMING SOON</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div className="col-md-4 card workPage">
-                        <a href="" className="worksHref">
-                            <img src={require('./img/Pacman-1.gif')} className="card-img-top worksImage packman" alt="Coming soon"></img>
-                            <div className="card-body worksName">
-                                <p className="card-text">COMING SOON</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div className="col-md-4 card workPage">
-                        <a href="" className="worksHref">
-                            <img src={require('./img/Pacman-1.gif')} className="card-img-top worksImage packman" alt="Coming soon"></img>
-                            <div className="card-body worksName">
-                                <p className="card-text">COMING SOON</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div className="col-md-4 card workPage">
-                        <a href="" className="worksHref">
-                            <img src={require('./img/Pacman-1.gif')} className="card-img-top worksImage packman" alt="Coming soon"></img>
-                            <div className="card-body worksName">
-                                <p className="card-text">COMING SOON</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div className="col-md-4 card workPage">
-                        <a href="" className="worksHref">
-                            <img src={require('./img/Pacman-1.gif')} className="card-img-top worksImage packman" alt="Coming soon"></img>
-                            <div className="card-body worksName">
-                                <p className="card-text">COMING SOON</p>
-                            </div>
-                        </a>
-                    </div> 
+                    </div>            
+                    )}
                 </div>
                 <a href="javascript:void(0)" id="seeAll" ref="seeAll" onClick={this.changeText}><p>SEE ALL...</p></a>                                                                             
             </div>
