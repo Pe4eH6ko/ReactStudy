@@ -1,7 +1,18 @@
 import React from 'react';
 import './Blog.scss';
+import Article from './Article.js';
 
 class Blog extends React.Component{
+
+    constructor(props){
+        super(props);
+        this.articleDate = new Date()
+        this.state = {
+            elements:[
+                {imgSrc: require("./img/img-1.png"), imgAlt: 'wedding', header: 'MY WEDDING', date: 'SEP 24, 2017', text: 'article/wedding.txt'}    
+            ]
+        }  
+    }
 
     changeText() {
         var link = document.getElementById("showAll");
@@ -9,6 +20,7 @@ class Blog extends React.Component{
     }
 
     render(){
+        const elements = this.state.elements
         return(
             <div className = "blogPart" id="blog">
                 <div className = "blog-head">
@@ -16,7 +28,14 @@ class Blog extends React.Component{
                     <p>NEWS FROM MY LIFE</p>
                 </div>
                 <div className = "blogs">
-                    <div className="card mb-3 first">
+                    <Article
+                        imgSrc={elements[0].imgSrc}
+                        imgAlt={elements[0].imgAlt}
+                        header={elements[0].header}
+                        date={elements[0].date}
+                        text={elements[0].text}
+                    />
+                    {/* <div className="card mb-3 first">
                         <div className="row no-gutters story">
                             <div className="col-md-4">
                                 <img src={require("./img/img-1.png")} className="card-img" alt="..."></img>
@@ -29,7 +48,7 @@ class Blog extends React.Component{
                                 </div>
                              </div>
                         </div>
-                    </div>    
+                    </div>     */}
                 </div>
                 <a href="javascript:void(0)" onClick={this.changeText} id="showAll"><p className="showAll">SHOW ALL POSTS</p></a>    
             </div>

@@ -31,7 +31,7 @@ class Aboutme extends React.Component{
     }
     render(){
         return(
-            <div className = "aboutPart">
+            <div className = "aboutPart" id="aboutme">
                 <div className = "about-head">
                     <h1 className="head">ABOUT ME</h1>
                     <p>I AM A WEB DEVELOPER FROM FRANKIVSK</p>
@@ -45,7 +45,7 @@ class Aboutme extends React.Component{
                                 <h5>WHAT I {div.word}</h5>
                                 <p className='text'>{this.makeText(div.text)}</p> 
                             </div>
-                        )}                                                             */}
+                        )}                                                             
                     </div>
                 </div>
             </div>

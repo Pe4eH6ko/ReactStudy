@@ -2,14 +2,18 @@ import React from 'react';
 import "./Contactme.scss";
 import $ from 'jquery';
 
-class Contactme extends React.Component{
+class Contactme extends React.Component{ 
 
-    sendForm(){
-        $.post("sendFrom.php", $.get("#myForm").serialize(),function(data){
-            alert("Your Message Send!");
-        }, "json");
-    }
     render(){
+        $("#myForm").submit(function(event){
+            $.ajax({
+                type: 'POST',
+                url: 'formSend.php',
+                data: $("#myForm").serialize(),
+                success: function(){
+                }
+            });
+        });
         return(
             <div className="contactmePart" id="contactme">
                 <div className = "contact-head">
